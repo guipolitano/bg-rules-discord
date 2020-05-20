@@ -91,6 +91,7 @@ client.on("message", async (message) => {
             PDF.setDescription("Arquivo: " + pdf.data);
 
             message.channel.send(PDF);
+            collectorRules.stop();
           }
         });
       }
