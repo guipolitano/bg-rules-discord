@@ -29,6 +29,7 @@ client.on("message", async (message) => {
       mensagem += `${index + 1} - ${e.name}.\n`;
     });
     const game = new Discord.MessageEmbed();
+    game.setColor("#42b983");
     game.setTitle("JOGOS");
     game.setDescription(mensagem);
     game.setFooter("Digite o número correspondente ou 'c' para cancelar.");
@@ -59,6 +60,7 @@ client.on("message", async (message) => {
           mensagem += `${index + 1} - ${e.name}.\n`;
         });
         const game = new Discord.MessageEmbed();
+        game.setColor("#0099ff");
         game.setTitle("REGRAS");
         game.setDescription(mensagem);
         game.setFooter("Digite o número correspondente ou 'c' para cancelar.");
@@ -87,6 +89,7 @@ client.on("message", async (message) => {
             );
             const PDF = new Discord.MessageEmbed();
             PDF.type = "link";
+            PDF.setColor("#e73500");
             PDF.setTitle(response.data[parseInt(message.content) - 1].name);
             PDF.setDescription("Arquivo: " + pdf.data);
 
