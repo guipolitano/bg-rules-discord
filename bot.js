@@ -97,6 +97,11 @@ client.on("message", async (message) => {
             collectorRules.stop();
           }
         });
+        collectorRules.on("end", (collected, reason) => {
+          if (reason === "time") {
+            message.channel.send(":timer: Tempo esgotado!");
+          }
+        });
       }
     });
 
